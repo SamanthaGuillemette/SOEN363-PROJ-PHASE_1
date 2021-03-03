@@ -17,24 +17,22 @@ CREATE TABLE Movies
 
 CREATE TABLE Actors
 (
-    mid           INT         NOT NULL,
+    mid           INT          NOT NULL,
     name          VARCHAR(256) NOT NULL,
     cast_position INT,
-    CONSTRAINT movies_fk
-        FOREIGN KEY (mid)
-            REFERENCES Movies (mid)
-            ON DELETE CASCADE,
+    FOREIGN KEY (mid)
+        REFERENCES Movies (mid)
+        ON DELETE CASCADE,
     PRIMARY KEY (mid, name)
 );
 
 CREATE TABLE Genres
 (
-    mid   INT         NOT NULL,
+    mid   INT          NOT NULL,
     genre VARCHAR(256) NOT NULL,
-    CONSTRAINT movies_fk
-        FOREIGN KEY (mid)
-            REFERENCES Movies (mid)
-            ON DELETE CASCADE,
+    FOREIGN KEY (mid)
+        REFERENCES Movies (mid)
+        ON DELETE CASCADE,
     PRIMARY KEY (mid, genre)
 );
 
@@ -49,13 +47,11 @@ CREATE TABLE Tags
 (
     mid INT NOT NULL,
     tid INT NOT NULL,
-    CONSTRAINT movies_fk
-        FOREIGN KEY (mid)
-            REFERENCES Movies (mid)
-            ON DELETE CASCADE,
-    CONSTRAINT tag_names_fk
-        FOREIGN KEY (tid)
-            REFERENCES Tag_names (tid)
-            ON DELETE CASCADE,
+    FOREIGN KEY (mid)
+        REFERENCES Movies (mid)
+        ON DELETE CASCADE,
+    FOREIGN KEY (tid)
+        REFERENCES Tag_names (tid)
+        ON DELETE CASCADE,
     PRIMARY KEY (mid, tid)
 );

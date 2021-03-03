@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS tags;
 CREATE TABLE Movies
 (
     mid        INT NOT NULL,
-    title      VARCHAR(150),
+    title      VARCHAR(256),
     year       INT,
     rating     REAL,
     num_rating INT,
@@ -18,7 +18,7 @@ CREATE TABLE Movies
 CREATE TABLE Actors
 (
     mid           INT         NOT NULL,
-    name          VARCHAR(60) NOT NULL,
+    name          VARCHAR(256) NOT NULL,
     cast_position INT,
     CONSTRAINT movies_fk
         FOREIGN KEY (mid)
@@ -30,7 +30,7 @@ CREATE TABLE Actors
 CREATE TABLE Genres
 (
     mid   INT         NOT NULL,
-    genre VARCHAR(60) NOT NULL,
+    genre VARCHAR(256) NOT NULL,
     CONSTRAINT movies_fk
         FOREIGN KEY (mid)
             REFERENCES Movies (mid)
@@ -41,7 +41,7 @@ CREATE TABLE Genres
 CREATE TABLE Tag_names
 (
     tid INT NOT NULL,
-    tag VARCHAR(60),
+    tag VARCHAR(256),
     PRIMARY KEY (tid)
 );
 

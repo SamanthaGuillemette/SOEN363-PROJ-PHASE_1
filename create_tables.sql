@@ -1,7 +1,14 @@
+DROP TABLE IF EXISTS movies CASCADE;
+DROP TABLE IF EXISTS actors;
+DROP TABLE IF EXISTS genres;
+DROP TABLE IF EXISTS tag_names CASCADE;
+DROP TABLE IF EXISTS tags;
+
+
 CREATE TABLE Movies
 (
     mid        INT NOT NULL,
-    title      VARCHAR(45),
+    title      VARCHAR(150),
     year       INT,
     rating     REAL,
     num_rating INT,
@@ -11,7 +18,7 @@ CREATE TABLE Movies
 CREATE TABLE Actors
 (
     mid           INT         NOT NULL,
-    name          VARCHAR(45) NOT NULL,
+    name          VARCHAR(60) NOT NULL,
     cast_position INT,
     CONSTRAINT movies_fk
         FOREIGN KEY (mid)
@@ -23,7 +30,7 @@ CREATE TABLE Actors
 CREATE TABLE Genres
 (
     mid   INT         NOT NULL,
-    genre VARCHAR(45) NOT NULL,
+    genre VARCHAR(60) NOT NULL,
     CONSTRAINT movies_fk
         FOREIGN KEY (mid)
             REFERENCES Movies (mid)
@@ -34,7 +41,7 @@ CREATE TABLE Genres
 CREATE TABLE Tag_names
 (
     tid INT NOT NULL,
-    tag VARCHAR(45),
+    tag VARCHAR(60),
     PRIMARY KEY (tid)
 );
 

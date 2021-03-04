@@ -1,4 +1,9 @@
-SELECT Movies.title
-FROM Movies
-         join Actors on Movies.mid = Actors.mid and Actors.name = 'Daniel Craig'
-ORDER BY Movies.title asc
+-- (a)
+-- Print all movies with actor Daniel Craig and sort by ascending movie title.
+-- No need to specify asc in the order by because it is using asc by default.
+
+SELECT title
+FROM movies
+         join actors on movies.mid = actors.mid and actors.name = 'Daniel Craig'
+ORDER BY title
+

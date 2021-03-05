@@ -18,4 +18,4 @@ FROM co_actor_count, (
         FROM co_actor_count
     ) as max
 WHERE co_actor_count.count = max
-ORDER BY co_actor_count.name ASC
+ORDER BY co_actor_count.name ASC;

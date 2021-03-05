@@ -84,4 +84,4 @@ WHERE M1.title = 'Mr. & Mrs. Smith'
     and FA.mid1 = M1.mid and FA.mid2 = M2.mid
     and FT.mid1 = M1.mid and FT.mid2 = M2.mid
     and FG.mid1 = M1.mid and FG.mid2 = M2.mid
-ORDER BY (similarity) DESC LIMIT 10
+ORDER BY (similarity) DESC LIMIT 10;

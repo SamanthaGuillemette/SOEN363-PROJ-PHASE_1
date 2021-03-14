@@ -17,21 +17,6 @@ FROM movies_with_tags mt1
 where mt1.tag LIKE '%good%'
   and mt2.tag LIKE '%bad%';
 
-/*
-Execution time:
-
-View creation: 3ms
-Query: 24ms
-
-+---------------------+
-|title                |
-+---------------------+
-|Bridget Jones's Diary|
-|Lawrence of Arabia   |
-|Ocean's Eleven       |
-|The Forgotten        |
-+---------------------+
-
-
- */
-
+-- View creation time: 3ms
+-- First execution time: 31ms
+-- Subsequent execution time: 24ms

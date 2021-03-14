@@ -9,18 +9,5 @@ GROUP BY genre
 HAVING COUNT(*) > 1000
 ORDER BY number_of_movies
 
-/*
-Execution time: 24ms
-
-+---------+----------------+
-|genre    |number_of_movies|
-+---------+----------------+
-|Adventure|1003            |
-|Crime    |1086            |
-|Action   |1445            |
-|Romance  |1644            |
-|Thriller |1664            |
-|Comedy   |3566            |
-|Drama    |5076            |
-+---------+----------------+
-*/
+-- First execution time: 55ms
+-- Subsequent execution time: 21ms

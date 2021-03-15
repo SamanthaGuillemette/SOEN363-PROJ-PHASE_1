@@ -72,9 +72,11 @@ SELECT M1.mid                                                              as mi
        (1 - (ABS(M1.rating - M2.rating) / GREATEST(M1.rating, M2.rating))) as rating_gap
 FROM movies as M1,
      movies as M2
-WHERE M1.mid <> M2.mid;
+WHERE M1.mid <> M2.mid
+  and M1.num_rating > 0
+  and M2.num_rating > 0;
 
--- View creation time: 2ms
+-- View creation time: 5ms
 
 -- Query to get the top 10 similar movies
 SELECT M2.title,

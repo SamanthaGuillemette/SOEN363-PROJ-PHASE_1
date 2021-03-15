@@ -1,0 +1,49 @@
+Profile querying actors with indexes
+Seq Scan on mw_actors  (cost=0.00..3838.42 rows=231742 width=22) (actual time=0.017..13.775 rows=231742 loops=1)
+Planning Time: 0.174 ms
+Execution Time: 18.486 ms
+
+
+Seq Scan on actors  (cost=0.00..3838.42 rows=231742 width=22) (actual time=0.012..15.789 rows=231742 loops=1)
+Planning Time: 0.100 ms
+Execution Time: 21.226 ms
+
+
+Seq Scan on mw_genres  (cost=0.00..320.09 rows=20809 width=11) (actual time=0.015..1.177 rows=20809 loops=1)
+Planning Time: 0.859 ms
+Execution Time: 1.581 ms
+
+
+Seq Scan on genres  (cost=0.00..320.09 rows=20809 width=11) (actual time=0.033..1.828 rows=20809 loops=1)
+Planning Time: 0.528 ms
+Execution Time: 2.236 ms
+
+
+Seq Scan on mw_movies  (cost=0.00..182.97 rows=10197 width=33) (actual time=0.013..0.625 rows=10197 loops=1)
+Planning Time: 0.723 ms
+Execution Time: 0.860 ms
+
+
+Seq Scan on movies  (cost=0.00..182.97 rows=10197 width=33) (actual time=0.013..1.228 rows=10197 loops=1)
+Planning Time: 0.597 ms
+Execution Time: 1.433 ms
+
+
+Seq Scan on mw_tag_names  (cost=0.00..212.22 rows=13222 width=17) (actual time=0.012..0.763 rows=13222 loops=1)
+Planning Time: 0.462 ms
+Execution Time: 1.023 ms
+
+
+Seq Scan on tag_names  (cost=0.00..212.22 rows=13222 width=17) (actual time=0.028..1.433 rows=13222 loops=1)
+Planning Time: 0.412 ms
+Execution Time: 1.703 ms
+
+
+Seq Scan on mw_tags  (cost=0.00..747.95 rows=51795 width=8) (actual time=0.015..2.827 rows=51795 loops=1)
+Planning Time: 0.544 ms
+Execution Time: 3.833 ms
+
+
+Seq Scan on tags  (cost=0.00..641.61 rows=32461 width=8) (actual time=1.113..7.770 rows=51795 loops=1)
+Planning Time: 0.649 ms
+Execution Time: 9.218 ms

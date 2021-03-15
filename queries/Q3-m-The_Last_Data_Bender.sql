@@ -5,10 +5,10 @@ DO $$
     BEGIN
         PERFORM  mid, name, cast_position, COUNT(*)
         FROM actors
-        GROUP BY mid, name, cast_position,
+        GROUP BY mid, name, cast_position
         HAVING COUNT(*) > 1;
         if found then
-            CREATE OR REPLACE VIEW actors_no_dup as SELECT DISTINCT mid, name, cast_position,
+            CREATE OR REPLACE VIEW actors_no_dup as SELECT DISTINCT mid, name, cast_position
                                                     FROM actors;
         end if;
     END$$;
